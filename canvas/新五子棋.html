@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五子棋</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            transition: all 1s ease;
+            background:  #fff;
+        }
+        label{
+            position: fixed;
+            top: 0;
+            left: 0;
+            color: #fff;
+            height: 30px;
+            width: 100px;
+            background: #031628;
+            padding: 0 10px;
+            line-height: 30px;
+            transition: 0.5s;
+            transform: translate(-120px);
+        }
+        input{
+            float: right;
+            height: 100%;
+            width: 20px
+        }
+        svg{
+            position: absolute;
+            left: 120px;
+        }
+        div{
+            width: 600px;
+            height: 600px;
+            position: relative;
+            margin: 50px auto 0;
+            background: #fff
+        }
+        canvas{
+            box-shadow: 0 0 5px #000;
+            background: url("GitHub.svg");
+            -webkit-background-size: cover;
+            background-size: cover;
+            border-radius: 5px;
+            transition: all 1s ease;
+        }
+        button{
+            position: absolute;
+            border: 1px solid;
+            border-radius: 5px;
+            color: #4cc9f0;
+            font-weight: bold;
+            background: #fff;
+            width: 15%;
+            height: 10%;
+            top: 0;
+            left: 102%;
+            cursor: pointer;
+            text-align: center;
+        }
+        button:hover{
+            background: #4cc9f0;
+            box-shadow: 0 0 99px 15px #4cc9f0;
+            color: #fff;
+        }
+        button:nth-of-type(2){
+            color: red;
+            top: 15%;
+        }
+        button:nth-of-type(2):hover{
+            background: red;
+            box-shadow: 0 0 99px 15px red;
+            color: #fff;
+        }
+        button:nth-of-type(3){
+            color: #b9e769;
+            display: none;
+        }
+        button:nth-of-type(3):hover{
+            background: #b9e769;
+            box-shadow: 0 0 99px 15px #b9e769;
+            color: #fff;
+        }
+        button:nth-of-type(4){
+            color: #f038ff;
+            display: none;
+            top: 15%;
+        }
+        button:nth-of-type(4):hover{
+            background: #f038ff;
+            box-shadow: 0 0 99px 15px #f038ff;
+            color: #fff;
+        }
+        button:nth-of-type(5){
+            color: #f80;
+            display: none;
+            top: 30%;
+        }
+    </style>
+</head>
+<body style="overflow: hidden;" oncontextmenu="plugging++; return false">
+<label for="m">
+    夜间模式
+    <input type="checkbox" id="m">
+    <svg height="100%" width="20" fill="#031628">
+        <g >
+            <circle r="3" cx="10" cy="7"/>
+            <circle r="3" cx="10" cy="15"/>
+            <circle r="3" cx="10" cy="23"/>
+        </g>
+    </svg>
+</label>
+<div>
+    <canvas>
+        当前浏览器不支持
+    </canvas>
+    <button>双人对决</button>
+    <button>不败人机</button>
+    <button>悔步</button>
+    <button>回溯</button>
+    <button>让先</button>
+</div>
+</body>
+<script src="JQ/jquery-3.2.1.min.js"></script>
+<script src="JS/draw.js"></script>
+<script type="text/javascript" src="JS/play.js"></script>
+<script type="text/javascript" src="JS/time.js"></script>
+</html>
